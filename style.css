@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+}
+
+.header {
+  width: 100vw;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(assets/images/header-image.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+nav {
+  max-width: 80vw;
+  height: 10vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+  cursor: pointer;
+}
+
+nav button {
+  border: 0;
+  outline: 0;
+  padding: 7px 15px;
+  background: #db0001;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid white;
+  padding: 7px 10px;
+}
+
+.lang-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+.main-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 10vh);
+  text-align: center;
+}
+
+.main-container h1 {
+  font-size: 60px;
+  font-weight: 600;
+  max-width: 650px;
+  line-height: 70px;
+}
+
+.main-container h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.email-signup {
+  background-color: white;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 550px;
+}
+
+.email-signup input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+}
+
+.email-signup button {
+  border: 0;
+  outline: 0;
+  background-color: #db0001;
+  color: white;
+  font-size: 16px;
+  padding: 15px 30px;
+  width: 200px;
+  cursor: pointer;
+}
+
+/* -----feaures-----*/
+.features-container {
+  padding: 50px 12%;
+  font-size: 22px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.text-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.img-col img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.text-col h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.faq h2 {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.faq-list {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+.faq-list li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.faq-list li label{
+    display: flex;
+    font-size: 18px;
+    padding: 20px;
+    align-items: center;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 32px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+     display: none;
+}
+
+.faq-list .content{
+
+    background-color: #303030;
+    padding: 0 20px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.faq-list input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.faq-list input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+small{
+    font-size: 12px;
+}
+
+.email-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-list .email-signup{
+    max-width: 600px;
+    position: absolute;
+}
+
+
+/* -------footer------ */
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a{
+    color: #777;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .lang-btn{
+    color: #777;
+    border-color: #777;
+    cursor: pointer;
+}
+
+.footer .lang-btn img{
+    filter: brightness(50%);
+}
+
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #777;
+}
